@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Line from './Line';
 import './App.css'
+import About from './About';
 
 const reg = /^[A-Za-z]$/;
 
@@ -95,6 +96,7 @@ function App() {
 
   return (
     <>
+
       <div className="table">
         {Array.from({ length: MAX_ATTEMPTS }, (_, i) => (
 
@@ -115,6 +117,8 @@ function App() {
       <p>
         A palavra era: {solution}
       </p> : null}
+
+        <About/>
     </>
   );
 }

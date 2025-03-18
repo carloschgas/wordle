@@ -59,6 +59,9 @@ const Line = (props) => {
     }, [props.finalLine, props.solution]);
 
     return (
+
+        
+        
         <div className="line">
             {props.customKey < props.try
                 ? finals.map((char, index) => (

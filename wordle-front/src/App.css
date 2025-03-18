@@ -4,6 +4,14 @@
   box-sizing: border-box;;
 }
 
+#root{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
 :root{
   --yellow-bg: #c09d00;
   --grey-bg: #575757;
@@ -27,6 +35,20 @@ body{
   border: 2px solid #FEFEFE;
   border-radius: 5px;
   text-transform: uppercase;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.about{
+  position: absolute;
+  width: 600px;
+  background-color: #0f0f0f;
+  border-radius: 14px;
+  z-index: 1;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
 }
 
 .line{
@@ -52,19 +74,37 @@ p{
   font-weight: bold;
 }
 
+button{
+  border: 2px solid white;
+  width: fit-content;
+  border-radius: 10%;
+  padding: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+
+
 .square.green {
-  animation: setColorGreen 0.7s linear;
   background-color: var(--green-bg);
+  animation: setColorGreen 0.8s linear;
 }
 
 .square.yellow {
   background-color: var(--yellow-bg);
-  animation: setColorYellow 0.7s linear;
+  animation: setColorYellow 0.8s linear;
+
 }
 
 .square.none {
   background-color: var(--grey-bg);
-  animation: setColorGrey 0.7s linear;
+  animation: setColorGrey 0.8s linear;
+
 }
 
 @keyframes setColorGreen {
@@ -77,15 +117,19 @@ p{
   }
 }
 
+
 @keyframes setColorGrey {
   from {
     background-color: transparent;
+    
   }
 
   to {
     background-color: var(--grey-bg);
   }
 }
+
+
 @keyframes setColorYellow {
   
   from {
